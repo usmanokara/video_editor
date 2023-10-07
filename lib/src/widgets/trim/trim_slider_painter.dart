@@ -56,7 +56,7 @@ class TrimSliderPainter extends CustomPainter {
 
     switch (style.edgesType) {
       case TrimSliderEdgesType.bar:
-        paintBar(
+        /*    paintBar(
           canvas,
           size,
           rrect: rrect,
@@ -67,7 +67,7 @@ class TrimSliderPainter extends CustomPainter {
           halfLineWidth: halfLineWidth,
         );
         break;
-      case TrimSliderEdgesType.circle:
+      case TrimSliderEdgesType.circle: */
         paintCircle(
           canvas,
           size,
@@ -244,9 +244,9 @@ class TrimSliderPainter extends CustomPainter {
     paintIndicator(canvas, size);
 
     // LEFT CIRCLE
-    canvas.drawCircle(centerLeft, style.edgesSize, edges);
+    canvas.drawCircle(centerLeft, style.edgesSize + 10, edges);
     // RIGHT CIRCLE
-    canvas.drawCircle(centerRight, style.edgesSize, edges);
+    canvas.drawCircle(centerRight, style.edgesSize + 10, edges);
 
     paintIcons(canvas, centerLeft: centerLeft, centerRight: centerRight);
   }
